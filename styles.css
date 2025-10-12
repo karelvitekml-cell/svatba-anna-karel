@@ -13,12 +13,13 @@
 
 *{box-sizing:border-box}
 body{
+  
+  margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
-  color: #2c2c2c;
-  background-image: url('IMG_3721.JPG'); /* cesta k obrázku */
-  background-size: cover;
+  background-image: url('images/background.jpg'); /* tvá fotka */
+  background-size: cover;       /* pokryje celou obrazovku */
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -38,21 +39,22 @@ body{
 .section{padding:40px 0;text-align:center}
 .alt-bg{background:linear-gradient(180deg,#fff,#f7fbf8)}
 .program-list{
-  background: linear-gradient(135deg, #FFC0CB, #FFB6C1); /* jemný růžový gradient */
-  padding: 25px;
-  border-radius: 15px;
-  color: white;             /* barva textu */
+
+  background: linear-gradient(135deg, rgba(255,192,203,0.8), rgba(255,182,193,0.8)); /* jemně růžový a průhledný */
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
   font-size: 18px;
   line-height: 1.6;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* jemný stín pro hloubku */
-  max-width: 90%;           /* širší box */
-  margin: 20px auto;        /* centrování */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
   text-align: center;
 
-  /* květinový rámeček */
-  border: 8px solid transparent; /* prostor pro obrázek rámečku */
-  border-image: url('images/flower-frame.png') 30 round; /* cesta k obrázku rámečku */
-}}
+  /* květinový rámeček kolem boxu */
+  border: 12px solid transparent;
+  border-image: url('images/flower-frame.png') 30 round;}
 .program-list li{padding:10px 14px;border-bottom:1px dashed rgba(0,0,0,0.06);font-size:1.05rem}
 .rsvp-form{max-width:720px;margin:0 auto;text-align:left}
 .rsvp-form label{display:block;margin:8px 0 4px;font-weight:600}
