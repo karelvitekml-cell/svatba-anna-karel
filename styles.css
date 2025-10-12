@@ -12,7 +12,16 @@
 }
 
 *{box-sizing:border-box}
-body{font-family:'Lato',sans-serif;margin:0;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+body{
+  font-family: 'Lato', sans-serif;
+  color: #2c2c2c;
+  background-image: url('images/background.jpg'); /* cesta k obrázku */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .container{max-width:1100px;margin:0 auto;padding:2rem}
 .site-header{background:transparent;padding:1rem 0;text-align:center}
 .logo{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--c3);margin:0}
@@ -52,4 +61,4 @@ body{font-family:'Lato',sans-serif;margin:0;color:var(--text);background:var(--b
   .countdown{flex-wrap:wrap}
   .countdown .time{min-width:70px}
   .container{padding:1rem}
-}
+}"Add background to body"
