@@ -37,7 +37,7 @@ body{
 .countdown .time small{display:block;font-size:.8rem;color:var(--c5);margin-top:6px}
 
 .section{padding:40px 0;text-align:center}
-.alt-bg{background:linear-gradient(180deg,#fff,#f7fbf8)}
+.alt-bg{background:transparent;
 .program-list{
 
   background: linear-gradient(135deg, rgba(255,192,203,0.8), rgba(255,182,193,0.8)); /* jemně růžový a průhledný */
