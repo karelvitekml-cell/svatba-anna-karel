@@ -37,16 +37,22 @@ body{
 
 .section{padding:40px 0;text-align:center}
 .alt-bg{background:linear-gradient(180deg,#fff,#f7fbf8)}
-.program-list{ background: linear-gradient(135deg, #56A369, #7DA356); /* elegantní zelený přechod */
-  padding: 25px;            /* prostor kolem textu */
-  border-radius: 15px;      /* zaoblené rohy */
+.program-list{
+  background: linear-gradient(135deg, #FFC0CB, #FFB6C1); /* jemný růžový gradient */
+  padding: 25px;
+  border-radius: 15px;
   color: white;             /* barva textu */
-  font-size: 18px;          /* velikost textu */
-  line-height: 1.6;         /* mezery mezi řádky */
+  font-size: 18px;
+  line-height: 1.6;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* jemný stín pro hloubku */
-  max-width: 600px;         /* šířka boxu */
-  margin: 20px auto;        /* centrování na stránce */
-  text-align: center;       /* text zarovnán na střed */}
+  max-width: 90%;           /* širší box */
+  margin: 20px auto;        /* centrování */
+  text-align: center;
+
+  /* květinový rámeček */
+  border: 8px solid transparent; /* prostor pro obrázek rámečku */
+  border-image: url('images/flower-frame.png') 30 round; /* cesta k obrázku rámečku */
+}}
 .program-list li{padding:10px 14px;border-bottom:1px dashed rgba(0,0,0,0.06);font-size:1.05rem}
 .rsvp-form{max-width:720px;margin:0 auto;text-align:left}
 .rsvp-form label{display:block;margin:8px 0 4px;font-weight:600}
