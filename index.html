@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Anna & Karel — Naše svatba</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="logo">Anna &amp; Karel</h1>
+    <p class="sub">1. srpna 2026 • Zámek Troja, Praha</p>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <h2>Srdečně Vás zveme na naši svatbu</h2>
+      <p class="hero-date">1. srpna 2026 — obřad v 11:00</p>
+      <div id="countdown" class="countdown" aria-live="polite">
+        <div class="time"><span id="days">--</span><small>dní</small></div>
+        <div class="time"><span id="hours">--</span><small>hod</small></div>
+        <div class="time"><span id="minutes">--</span><small>min</small></div>
+        <div class="time"><span id="seconds">--</span><small>sek</small></div>
+      </div>
+      <a href="#rsvp" class="btn primary">Potvrdit účast</a>
+    </div>
+  </section>
+
+  <section id="o-nas" class="section container">
+    <h3>Náš příběh</h3>
+    <p>Naše cesty se protnuly v srpnu 2021. 5 let společně objevujeme svět i malé radosti všedních dnů — a teď chceme sdílet náš velký den s vámi. </p>
+  </section>
+
+  <section id="program" class="section alt-bg container">
+    <h3>Harmonogram</h3>
+    <ul class="program-list">
+      <li><strong>Příjezd</strong> — 8:00–10:00</li>
+      <li><strong>Obřad</strong> — 11:00</li>
+      <li><strong>Gratulace &amp; společné focení</strong> — 11:30–13:00</li>
+      <li><strong>Oběd</strong> — 13:00</li>
+      <li><strong>Hry</strong> — 16:00</li>
+      <li><strong>Krájení dortu</strong> — 17:00</li>
+      <li><strong>První tanec</strong> — 18:00</li>
+      <li><strong>Raut a grilování</strong> — 18:30</li>
+      <li><strong>Večerní zábava</strong> — 19:30</li>
+    </ul>
+  </section>
+
+  <section id="rsvp" class="section container">
+    <h3>Potvrzení účasti</h3>
+    <form id="rsvpForm" class="rsvp-form" novalidate>
+      <label for="name">Jméno a příjmení</label>
+      <input id="name" name="name" type="text" required>
+      <label for="email">E‑mail</label>
+      <input id="email" name="email" type="email" required>
+      <label>Budete se účastnit?</label>
+      <select name="attend" id="attend" required>
+        <option value="ano">Ano</option>
+        <option value="ne">Ne</option>
+      </select>
+      <label for="guests">Počet doprovodu</label>
+      <input id="guests" name="guests" type="number" min="0" value="0">
+      <label for="diet">Alergie / dietní omezení</label>
+      <input id="diet" name="diet" type="text">
+      <div class="actions">
+        <button type="submit" class="btn primary">Odeslat RSVP</button>
+        <button type="button" id="saveLocal" class="btn">Uložit koncept</button>
+      </div>
+      <p id="rsvpMsg" class="muted" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="photos" class="section alt-bg container">
+    <h3>Fotky ze svatby</h3>
+    <p>Nahrajte prosím vaše fotky na sdílené místo. Otevřený odkaz (nahraďte svým):</p>
+    <div class="photo-upload">
+      <img src="images/qr.png" alt="QR kód pro nahrání fotek" class="qr">
+      <p class="muted small">Naskenujte QR kód nebo navštivte <a href="https://example.com/anna-karel-photos" target="_blank" rel="noopener">example.com/anna-karel-photos</a> — nahraďte reálným odkazem na Google Drive / Dropbox / Google Photos.</p>
+    </div>
+  </section>
+
+  <section class="gifts section container">
+    <h3>Dary</h3>
+    <p>Vážení přátelé, nejvíc si přejeme vaši přítomnost. Pokud byste nám přesto chtěli přispět, upřednostňujeme dar ve formě finančního příspěvku na společný start do manželství — bude využit na náš společný domov a zážitky. Děkujeme vám za jakoukoliv podporu a za vaši lásku.</p>
+  </section>
+
+  <section id="kontakt" class="section container">
+    <h3>Kontakt</h3>
+    <p>Máte‑li dotazy, napište na <a href="mailto:karel.vitek.ml@gmail.com anebo anna.curevova@gmail.com">karel.vitek.ml@gmail.com anna.curevova@gmail.com </a>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Anna &amp; Karel — těšíme se na vás!</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
