@@ -1,20 +1,28 @@
 (function(){
   // Countdown to 2026-30-05 11:00 (Europe/Prague)
- const weddingDate = new Date("May 30, 2026 11:00:00").getTime();
-  function update(){
-    const now = Date.now();
-    let diff = Math.max(0, target - now);
-    const days = Math.floor(diff / (1000*60*60*24));
-    diff -= days * (1000*60*60*24);
-    const hours = Math.floor(diff / (1000*60*60));
-    diff -= hours * (1000*60*60);
-    const minutes = Math.floor(diff / (1000*60));
-    diff -= minutes * (1000*60);
-    const seconds = Math.floor(diff / 1000);
-    document.getElementById('days').textContent = String(days);
-    document.getElementById('hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+ <script>
+const weddingDate = new Date("May 30, 2026 11:00:00").getTime();
+
+const timer = setInterval(function() {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "<h3>Je to tady! 💍</h3>";
+  }
+}, 1000);
+</script>
   }
   update(); setInterval(update, 1000);
 
