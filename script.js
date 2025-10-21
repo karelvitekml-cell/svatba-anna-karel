@@ -1,6 +1,6 @@
 (function(){
   // Countdown to 2026-08-01 11:00 (Europe/Prague)
-  const target = new Date('2026-05-30 T11:00:00+02:00').getTime();
+  const target = new Date('2026-05-30T11:00:00+02:00').getTime();
   function update(){
     const now = Date.now();
     let diff = Math.max(0, target - now);
