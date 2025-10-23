@@ -120,7 +120,7 @@ body {
 }
 
 .program-list {
-  background: linear-gradient(135deg, rgba(255,192,203,0.3), rgba(255,182,193,0.8)); /* jemně růžový a průhledný */
+  background: linear-gradient(135deg, rgba(255,210,220,0.3), rgba(255,210,220,0.8)); /* jemně růžový a průhledný */
   padding: 50px;
   border-radius: 20px;
   font-size: 18px;
