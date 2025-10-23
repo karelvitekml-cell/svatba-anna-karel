@@ -1,4 +1,4 @@
-:root{
+:root {
   --c1:#56A369;
   --c2:#7DA356;
   --c3:#5B6EB0;
@@ -11,39 +11,115 @@
   --text:#222;
 }
 
-*{box-sizing:border-box}
+/* Reset a základ */
+* {
+  box-sizing: border-box;
+}
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+
+  /* 💡 Fotka na pozadí s jemným závojem */
   background-image:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), /* tmavý závoj */
-    url('img_3721.JPG'); /* tvoje fotka */
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url('img_3721.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: #2c2c2c;
 }
 
-.container{max-width:1100px;margin:0 auto;padding:2rem}
-.site-header{background:transparent;padding:1rem 0;text-align:center}
-.logo{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--c3);margin:0}
-.sub{color:var(--c5);margin:6px 0 0}
+/* Obecné kontejnery */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-.hero{background:linear-gradient(180deg, rgba(86,163,105,0.08), rgba(156,103,158,0.03));text-align:center;padding:60px 20px;border-bottom:1px solid rgba(0,0,0,0.04)}
-.hero h2{font-family:'Playfair Display',serif;color:var(--c3);font-size:2.2rem;margin:0}
-.hero-date{color:var(--c5);margin-top:8px}
-.countdown{display:flex;justify-content:center;gap:18px;margin:18px 0 12px}
-.countdown .time{background:white;padding:14px 18px;border-radius:8px;box-shadow:0 6px 20px rgba(33,33,33,0.06);min-width:80px}
-.countdown .time span{display:block;font-size:1.6rem;font-weight:700;color:var(--c1)}
-.countdown .time small{display:block;font-size:.8rem;color:var(--c5);margin-top:6px}
+/* Hlavička */
+.site-header {
+  background: transparent;
+  padding: 1rem 0;
+  text-align: center;
+}
 
-.section{padding:40px 0;text-align:center}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: var(--c3);
+  margin: 0;
+}
 
-.alt-bg{background:transparent;}
+.sub {
+  color: var(--c5);
+  margin: 6px 0 0;
+}
 
-.program-list{
+/* Hero sekce */
+.hero {
+  background: linear-gradient(180deg, rgba(86,163,105,0.08), rgba(156,103,158,0.03));
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--c3);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.hero-date {
+  color: var(--c5);
+  margin-top: 8px;
+}
+
+/* Odpočet */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 18px 0 12px;
+}
+
+.countdown .time {
+  background: white;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(33,33,33,0.06);
+  min-width: 80px;
+}
+
+.countdown .time span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--c1);
+}
+
+.countdown .time small {
+  display: block;
+  font-size: .8rem;
+  color: var(--c5);
+  margin-top: 6px;
+}
+
+/* Sekce */
+.section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Harmonogram */
+.alt-bg {
+  background: transparent;
+}
+
+.program-list {
   background: linear-gradient(135deg, rgba(255,192,203,0.8), rgba(255,182,193,0.8)); /* jemně růžový a průhledný */
   padding: 50px;
   border-radius: 20px;
@@ -56,27 +132,111 @@ body{
   text-align: center;
 }
 
-.program-list li{padding:10px 14px;border-bottom:1px dashed rgba(0,0,0,0.06);font-size:1.05rem}
-.rsvp-form{max-width:720px;margin:0 auto;text-align:left}
-.rsvp-form label{display:block;margin:8px 0 4px;font-weight:600}
-.rsvp-form input,rsvp-form select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin-bottom:8px}
-.actions{display:flex;gap:10px;margin-top:12px}
-.btn{display:inline-block;padding:10px 18px;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
-.btn.primary{background:var(--c8);color:white}
-.btn.secondary{background:var(--c2);color:white}
+.program-list li {
+  padding: 10px 14px;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+  font-size: 1.05rem;
+}
 
-.photo-upload{display:flex;flex-direction:column;align-items:center;gap:12px}
-.qr{width:200px;height:200px;border-radius:8px;background:white;padding:10px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+/* RSVP */
+.rsvp-form {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
 
-.gifts p{max-width:720px;margin:0 auto;color:var(--c5)}
+.rsvp-form label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 600;
+}
 
-.site-footer{background:linear-gradient(180deg,var(--c5),var(--c6));color:white;padding:28px 0;text-align:center;margin-top:40px}
-.muted{color:rgba(0,0,0,0.45);font-size:.95rem}
-.small{font-size:.9rem}
+.rsvp-form input,
+rsvp-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 8px;
+}
 
-/* responsive */
-@media (max-width:800px){
-  .countdown{flex-wrap:wrap}
-  .countdown .time{min-width:70px}
-  .container{padding:1rem}
+/* Tlačítka */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--c8);
+  color: white;
+}
+
+.btn.secondary {
+  background: var(--c2);
+  color: white;
+}
+
+/* Fotky */
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qr {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* Text sekce Dary */
+.gifts p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--c5);
+}
+
+/* Patička */
+.site-footer {
+  background: linear-gradient(180deg, var(--c5), var(--c6));
+  color: white;
+  padding: 28px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.muted {
+  color: rgba(0,0,0,0.45);
+  font-size: .95rem;
+}
+
+.small {
+  font-size: .9rem;
+}
+
+/* Responsivita */
+@media (max-width:800px) {
+  .countdown {
+    flex-wrap: wrap;
+  }
+  .countdown .time {
+    min-width: 70px;
+  }
+  .container {
+    padding: 1rem;
+  }
 }
