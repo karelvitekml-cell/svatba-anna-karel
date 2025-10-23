@@ -41,7 +41,14 @@ const timer = setInterval(function() {
     form.reset();
   });
   saveBtn && saveBtn.addEventListener('click', function(){ const data = serialize(form); localStorage.setItem('rsvpDraft', JSON.stringify(data)); msg.textContent='Uloženo jako koncept.'; });
-
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
   // load draft if exists
   try{
     const draft = JSON.parse(localStorage.getItem('rsvpDraft')||'null');
