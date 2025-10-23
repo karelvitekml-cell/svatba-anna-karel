@@ -12,12 +12,14 @@
 }
 
 *{box-sizing:border-box}
-bodybody{
+
+body{
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   background-image:
-    ('img_3721.JPG');
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), /* tmavý závoj */
+    url('img_3721.JPG'); /* tvoje fotka */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,9 +40,10 @@ bodybody{
 .countdown .time small{display:block;font-size:.8rem;color:var(--c5);margin-top:6px}
 
 .section{padding:40px 0;text-align:center}
-.alt-bg{background:transparent;
-.program-list{
 
+.alt-bg{background:transparent;}
+
+.program-list{
   background: linear-gradient(135deg, rgba(255,192,203,0.8), rgba(255,182,193,0.8)); /* jemně růžový a průhledný */
   padding: 50px;
   border-radius: 20px;
@@ -52,6 +55,7 @@ bodybody{
   margin: 40px auto;
   text-align: center;
 }
+
 .program-list li{padding:10px 14px;border-bottom:1px dashed rgba(0,0,0,0.06);font-size:1.05rem}
 .rsvp-form{max-width:720px;margin:0 auto;text-align:left}
 .rsvp-form label{display:block;margin:8px 0 4px;font-weight:600}
@@ -75,4 +79,4 @@ bodybody{
   .countdown{flex-wrap:wrap}
   .countdown .time{min-width:70px}
   .container{padding:1rem}
-}"Add background to body"
+}
