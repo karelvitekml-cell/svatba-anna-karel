@@ -23,7 +23,6 @@ body {
 
   /* 💡 Fotka na pozadí s jemným závojem */
   background-image:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
     url('img_3721.JPG');
   background-size: cover;
   background-position: center;
