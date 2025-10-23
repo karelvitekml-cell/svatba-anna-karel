@@ -192,6 +192,7 @@ rsvp-form select {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  color: #f6a5c0
 }
 
 .qr {
