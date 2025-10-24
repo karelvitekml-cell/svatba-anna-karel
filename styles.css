@@ -55,6 +55,26 @@ h1, h2, h3 {
   color: #6fa8dc;
   font-size: .85rem;
 }
+/* Harmonogram růžová podložka */
+.program-list {
+  background: linear-gradient(135deg, rgba(255,210,220,0.3), rgba(255,210,220,0.8));
+  padding: 50px;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  color: #6fa8dc; /* text pastelově modrá */
+}
+
+.program-list li {
+  padding: 10px 14px;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+  font-size: 1.05rem;
+}
 
 /* Tlačítka */
 .btn.primary {
