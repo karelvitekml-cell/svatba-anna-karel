@@ -99,3 +99,11 @@ h1, h2, h3 {
   text-align: center;
   margin-top: 40px;
 }
+.qr {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
