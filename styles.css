@@ -1,83 +1,34 @@
-:root {
-  --c1:#56A369;
-  --c2:#7DA356;
-  --c3:#5B6EB0;
-  --c4:#9C679E;
-  --c5:#67899E;
-  --c6:#679A9E;
-  --c7:#849E67;
-  --c8:#9E6767;
-  --bg:#fffdfd;
-  --text:#222;
-}
-
-/* Reset */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Lato', sans-serif;
-
-  /* Pozadí */
-  background-image:
-    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
-    url('IMG_3721.JPG');
+  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('IMG_3721.JPG');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   color: #2c2c2c;
 }
 
-/* Kontejnery */
+/* 🌸 Jemná bílo-růžová vlnka */
+.divider {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="%23fce4ec" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,117.3C672,96,768,64,864,74.7C960,85,1056,139,1152,144C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') center/cover no-repeat;
+  height: 80px;
+  margin: 40px 0;
+  opacity: 0.8;
+}
+
+/* Základní rozložení */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Hlavička */
-.site-header {
-  background: transparent;
-  padding: 1rem 0;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.logo {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  color: var(--c3);
-  margin: 0;
+  color: #6fa8dc; /* pastelově modrá */
 }
 
-.sub {
-  color: var(--c5);
-  margin: 6px 0 0;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(180deg, rgba(86,163,105,0.08), rgba(156,103,158,0.03));
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h2 {
-  font-family: 'Playfair Display', serif;
-  color: var(--c3);
-  font-size: 2.2rem;
-  margin: 0;
-}
-
-.hero-date {
-  color: var(--c5);
-  margin-top: 8px;
-}
-
-/* Odpočet */
 .countdown {
   display: flex;
   justify-content: center;
@@ -86,111 +37,44 @@ body {
 }
 
 .countdown .time {
-  background: white;
+  background: rgba(255,255,255,0.8);
   padding: 14px 18px;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(33,33,33,0.06);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   min-width: 80px;
 }
 
 .countdown .time span {
-  display: block;
   font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--c1);
+  font-weight: bold;
+  color: #9fc5e8; /* pastelově světle modrá */
 }
 
 .countdown .time small {
-  display: block;
-  font-size: .8rem;
-  color: var(--c5);
-  margin-top: 6px;
+  color: #6fa8dc;
+  font-size: .85rem;
 }
 
-/* Sekce */
-.section {
-  padding: 60px 0;
-  text-align: center;
-  position: relative;
-}
-
-/* 🌸 Oddělovací vlnka */
-.section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="%23f7cad0" fill-opacity="1" d="M0,64L80,74.7C160,85,320,107,480,133.3C640,160,800,192,960,170.7C1120,149,1280,75,1360,37.3L1440,0L1440,150L1360,150C1280,150,1120,150,960,150C800,150,640,150,480,150C320,150,160,150,80,150L0,150Z"></path></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  opacity: 0.7;
-}
-
-/* Harmonogram */
-.program-list {
-  background: linear-gradient(135deg, rgba(255,210,220,0.3), rgba(255,210,220,0.8));
-  padding: 50px;
-  border-radius: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  width: 90%;
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.program-list li {
-  padding: 10px 14px;
-  border-bottom: 1px dashed rgba(0,0,0,0.1);
-  font-size: 1.05rem;
-}
-
-/* RSVP */
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
+/* Tlačítka */
+.btn.primary {
+  background: #f4c2d7;
+  color: white;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
-  border: 0;
-  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.btn.primary {
-  background: var(--c8);
-  color: white;
+.btn.primary:hover {
+  background: #f19dc3;
 }
 
-/* Fotky */
-.photo-upload {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  color: #f6a5c0;
-}
-
-/* Patička */
+/* Footer */
 .site-footer {
-  background: linear-gradient(180deg, var(--c5), var(--c6));
+  background: linear-gradient(180deg, #9fc5e8, #f4c2d7);
   color: white;
   padding: 28px 0;
   text-align: center;
   margin-top: 40px;
-}
-
-/* Responsivita */
-@media (max-width:800px) {
-  .countdown {
-    flex-wrap: wrap;
-  }
-  .countdown .time {
-    min-width: 70px;
-  }
-  .container {
-    padding: 1rem;
-  }
 }
