@@ -11,7 +11,7 @@
   --text:#222;
 }
 
-/* Reset a základ */
+/* Reset */
 * {
   box-sizing: border-box;
 }
@@ -21,9 +21,9 @@ body {
   padding: 0;
   font-family: 'Lato', sans-serif;
 
-  /* 💡 Fotka na pozadí s jemným závojem */
+  /* Pozadí */
   background-image:
-  linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
     url('IMG_3721.JPG');
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ body {
   color: #2c2c2c;
 }
 
-/* Obecné kontejnery */
+/* Kontejnery */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -58,12 +58,11 @@ body {
   margin: 6px 0 0;
 }
 
-/* Hero sekce */
+/* Hero */
 .hero {
   background: linear-gradient(180deg, rgba(86,163,105,0.08), rgba(156,103,158,0.03));
   text-align: center;
   padding: 60px 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .hero h2 {
@@ -110,22 +109,34 @@ body {
 
 /* Sekce */
 .section {
-  padding: 40px 0;
+  padding: 60px 0;
   text-align: center;
+  position: relative;
+}
+
+/* 🌸 Oddělovací vlnka */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="%23f7cad0" fill-opacity="1" d="M0,64L80,74.7C160,85,320,107,480,133.3C640,160,800,192,960,170.7C1120,149,1280,75,1360,37.3L1440,0L1440,150L1360,150C1280,150,1120,150,960,150C800,150,640,150,480,150C320,150,160,150,80,150L0,150Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 /* Harmonogram */
-.alt-bg {
-  background: transparent;
-}
-
 .program-list {
-  background: linear-gradient(135deg, rgba(255,210,220,0.3), rgba(255,210,220,0.8)); /* jemně růžový a průhledný */
+  background: linear-gradient(135deg, rgba(255,210,220,0.3), rgba(255,210,220,0.8));
   padding: 50px;
   border-radius: 20px;
   font-size: 18px;
   line-height: 1.6;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   width: 90%;
   max-width: 800px;
   margin: 40px auto;
@@ -134,39 +145,11 @@ body {
 
 .program-list li {
   padding: 10px 14px;
-  border-bottom: 1px dashed rgba(0,0,0,0.06);
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
   font-size: 1.05rem;
 }
 
 /* RSVP */
-.rsvp-form {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.rsvp-form label {
-  display: block;
-  margin: 8px 0 4px;
-  font-weight: 600;
-}
-
-.rsvp-form input,
-rsvp-form select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #e6e6e6;
-  margin-bottom: 8px;
-}
-
-/* Tlačítka */
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-
 .btn {
   display: inline-block;
   padding: 10px 18px;
@@ -181,34 +164,13 @@ rsvp-form select {
   color: white;
 }
 
-.btn.secondary {
-  background: var(--c2);
-  color: white;
-}
-
 /* Fotky */
 .photo-upload {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  color: #f6a5c0
-}
-
-.qr {
-  width: 200px;
-  height: 200px;
-  border-radius: 8px;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-}
-
-/* Text sekce Dary */
-.gifts p {
-  max-width: 720px;
-  margin: 0 auto;
-  color: #f6a5c0
+  color: #f6a5c0;
 }
 
 /* Patička */
@@ -218,15 +180,6 @@ rsvp-form select {
   padding: 28px 0;
   text-align: center;
   margin-top: 40px;
-}
-
-.muted {
-  color: rgba(0,0,0,0.45);
-  font-size: .95rem;
-}
-
-.small {
-  font-size: .9rem;
 }
 
 /* Responsivita */
