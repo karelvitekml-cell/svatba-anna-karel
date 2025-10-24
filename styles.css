@@ -107,3 +107,57 @@ h1, h2, h3 {
   padding: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
+/* 🌸 Responzivní úpravy pro mobilní zařízení */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* text bude čitelnější na malém displeji */
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.6rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .countdown {
+    flex-direction: column; /* odpočet bude pod sebou */
+    gap: 10px;
+  }
+
+  .countdown .time {
+    min-width: 60px;
+    padding: 10px 14px;
+  }
+
+  .program-list {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+
+  iframe {
+    height: 300px; /* mapy se vejdou lépe na mobil */
+  }
+
+  .photo-upload .qr {
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .gifts p,
+  .rsvp-form input,
+  .rsvp-form select,
+  p {
+    font-size: 0.95rem;
+  }
+}
