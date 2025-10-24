@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('IMG_3721.JPG');
+   color: #6fa8dc; /* 🎨 jemná pastelově modrá barva pro všechen text */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
