@@ -227,14 +227,6 @@ h1, h2, h3 {
     background-attachment: scroll; /* fixed nefunguje správně na iPhone */
     background-position: center top; /* zajistí, že hlavní část fotky je nahoře */
   }
-}/* Mobilní fix pro iOS */
-@media only screen and (max-width: 768px) {
-  body {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center top !important;
-    min-height: 100vh;
-  }
-}
+
 
 
