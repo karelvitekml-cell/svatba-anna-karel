@@ -235,6 +235,21 @@ h1, h2, h3 {
     background-attachment: scroll !important; /* iPhone ignoruje fixed, tohle zabrání deformaci */
     background-color: #fff; /* jemné bílé pozadí kolem, pokud obrázek nedosáhne po okraje */
   }
+  /* 🎨 Nastavení barvy běžného textu */
+body {
+  color: #ffffff; /* bílý text */
+}
+
+/* Zachování modrých nadpisů */
+h1, h2, h3 {
+  color: #6fa8dc;
+}
+
+/* Odkazy mohou mít svou barvu, pokud chceš zachovat */
+a {
+  color: inherit; /* nebo třeba #f4c2d7, pokud chceš růžové odkazy */
+}
+
 }
 
 
