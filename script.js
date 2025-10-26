@@ -1,7 +1,7 @@
 (function(){
-  // Countdown to 2026-30-05 11:00 (Europe/Prague)
+  // Countdown to 2026-30-05 12:00 (Europe/Prague)
  <script>
-const weddingDate = new Date("May 30, 2026 11:00:00").getTime();
+const weddingDate = new Date("May 30, 2026 12:00:00").getTime();
 
 const timer = setInterval(function() {
   const now = new Date().getTime();
