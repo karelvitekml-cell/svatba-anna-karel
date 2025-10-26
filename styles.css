@@ -227,6 +227,14 @@ h1, h2, h3 {
     background-attachment: scroll; /* fixed nefunguje správně na iPhone */
     background-position: center top; /* zajistí, že hlavní část fotky je nahoře */
   }
-
+/* 🎯 Oprava zobrazení pozadí speciálně pro iPhony */
+@supports (-webkit-touch-callout: none) {
+  body::before {
+    background-size: contain !important;   /* zobrazí celý obrázek */
+    background-position: center top !important;  /* posune ho nahoru, aby nebyl useknutý */
+    background-attachment: scroll !important; /* iPhone ignoruje fixed, tohle zabrání deformaci */
+    background-color: #fff; /* jemné bílé pozadí kolem, pokud obrázek nedosáhne po okraje */
+  }
+}
 
 
