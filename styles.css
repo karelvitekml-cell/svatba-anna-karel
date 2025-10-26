@@ -262,12 +262,4 @@ a {
   backface-visibility: hidden;
 }
 
-/* Optional: slight overlay so text stays readable (if needed) */
-.site-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.18); /* uprav průhlednost */
-  pointer-events: none;
-}
 
