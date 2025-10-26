@@ -262,4 +262,17 @@ a {
   backface-visibility: hidden;
 }
 
+/* ---------------------------------------------------- */
+/* ŘEŠENÍ PROBLÉMU S POZADÍM NA IOS (iPhone/iPad) */
+/* ---------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+    body {
+        /*
+         * Přepínáme background-attachment z 'fixed' na 'scroll'.
+         * 'fixed' způsobuje v mobilním Safari, že se obrázek zvětší na celou výšku stránky.
+         * 'scroll' vynutí správné chování 'background-size: cover'.
+         */
+        background-attachment: scroll !important;
+    }
+}
 
