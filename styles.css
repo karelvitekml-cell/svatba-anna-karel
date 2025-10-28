@@ -16,6 +16,14 @@ body {
   margin: 40px 0;
   opacity: 0.8;
 }
+  /* 🟩 Přidáno: nechť jde přes celou šířku viewportu */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 
 /* Základní rozložení */
 .container {
@@ -69,7 +77,16 @@ h1, h2, h3 {
   text-align: center;
   color:#050000 
 }
-
+/* 🟦 Upravíme zarovnání a rozměry pro mobily */
+@media (max-width: 768px) {
+  .program-list {
+    width: 95%;
+    padding: 25px 15px;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+  }
+}
 .program-list li {
   padding: 10px 14px;
   border-bottom: 1px dashed rgba(0,0,0,0.06);
