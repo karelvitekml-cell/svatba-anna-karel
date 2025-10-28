@@ -261,3 +261,24 @@ a:hover {
     background-size: cover !important;
   }
 }
+/* === Pozadí jako IMG - univerzální řešení (funguje na iPhone, Android i PC) === */
+.site-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* vyplní obrazovku, ořízne proporčně */
+  object-position: center;    /* zarovná střed */
+  z-index: -1;                /* pod veškerý obsah */
+  pointer-events: none;       /* aby na to nešlo kliknout */
+  filter: brightness(0.75);   /* lehce ztmaví kvůli čitelnosti textu */
+}
+
+/* iPhone fix – zakáže 'background-attachment: fixed' problém */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background: none !important; /* odstraní původní background-image */
+  }
+}
+
