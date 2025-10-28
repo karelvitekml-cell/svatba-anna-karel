@@ -222,20 +222,18 @@ h1, h2, h3 {
     height: 40px; /* menší vlnka pro mobil */
   }
 }/* iOS fix pro pozadí */
+/* ✅ iOS fix pro pozadí – opraveno */
 @supports (-webkit-touch-callout: none) {
   body {
-    background-attachment: scroll; /* fixed nefunguje správně na iPhone */
-    background-position: center top; /* zajistí, že hlavní část fotky je nahoře */
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-color: #000; /* volitelné – černé okraje pokud by fotka nepokryla vše */
   }
-/* 🎯 Oprava zobrazení pozadí speciálně pro iPhony */
-@supports (-webkit-touch-callout: none) {
-  body::before {
-    background-size: contain !important;   /* zobrazí celý obrázek */
-    background-position: center top !important;  /* posune ho nahoru, aby nebyl useknutý */
-    background-attachment: scroll !important; /* iPhone ignoruje fixed, tohle zabrání deformaci */
-    background-color: #fff; /* jemné bílé pozadí kolem, pokud obrázek nedosáhne po okraje */
-  }
-  /* 🎨 Nastavení barvy běžného textu */
+}
+
+/* 🎨 Nastavení barvy běžného textu */
 body {
   color: #ffffff; /* bílý text */
 }
@@ -245,34 +243,21 @@ h1, h2, h3 {
   color: #6fa8dc;
 }
 
-/* Odkazy mohou mít svou barvu, pokud chceš zachovat */
+/* Odkazy zachovávají styl */
 a {
-  color: inherit; /* nebo třeba #f4c2d7, pokud chceš růžové odkazy */
-/* Fixed <img> background (works reliably on iOS & Android & desktop) */
-.site-bg {
-  position: fixed;
-  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* fill viewport, crop nicely */
-  object-position: center center; /* adjust composition */
-  z-index: -1;           /* behind all content */
-  pointer-events: none;  /* clicks go through */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* ---------------------------------------------------- */
-/* ŘEŠENÍ PROBLÉMU S POZADÍM NA IOS (iPhone/iPad) */
-/* ---------------------------------------------------- */
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Mobilní oprava – univerzální fix pro iPhone i Android */
 @media only screen and (max-width: 1024px) {
-    body {
-        /*
-         * Přepínáme background-attachment z 'fixed' na 'scroll'.
-         * 'fixed' způsobuje v mobilním Safari, že se obrázek zvětší na celou výšku stránky.
-         * 'scroll' vynutí správné chování 'background-size: cover'.
-         */
-        background-attachment: scroll !important;
-    }
+  body {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
 }
-
